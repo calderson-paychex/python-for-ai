@@ -13,5 +13,5 @@ api_key = os.environ.get("API_KEY", "not-set")
 print(f"✅ API_KEY: {api_key}")
 
 # Test requests
-response = requests.get("https://api.github.com")
+response = requests.get("https://api.github.com", verify=False)
 print(f"✅ GitHub API status: {response.status_code}")
